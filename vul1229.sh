@@ -95,10 +95,6 @@ chmod 600 /data/tomcat/conf/*.policy
 #로그 디렉토리/파일 권한 설정
 chmod 750 /data/tomcat/logs
 
-#로그 포맷 설정
-sed -i '165d' /data/tomcat/conf/server.xml
-sed -i '165 i\ \t\pattern="combined"\t resolveHosts="false"\t />' /data/tomcat/conf/server.xml
-
 #불필요한 파일 및 디렉토리 삭제
 rm -rf /data/tomcat/webapps/examples
 rm -rf /data/tomcat/webapps/examples/WEB-INF/classes/examples
@@ -106,4 +102,3 @@ rm -rf /data/tomcat/webapps/examples/WEB-INF/classes/jsp2/examples
 
 #패스워드 파일 권한 설정##
 chmod 600 /data/tomcat/conf/tomcat-users.xml  
-#완료
